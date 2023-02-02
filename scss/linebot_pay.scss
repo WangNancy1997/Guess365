@@ -1,0 +1,395 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+   
+    background-color: rgb(154, 153, 223);
+    font-size: 8px;
+}
+
+.black_bg{
+    background-color: rgba(0, 0, 0, 0.474);
+    height: calc(var(--vh, 1vh) * 100);
+    min-width: 100vh;
+    
+    display: flex;
+    justify-content:center;
+    align-items: center;
+
+   
+  
+}
+
+.pay_bg{
+    background-color: #EFEFEF;
+    width:70%;
+    padding: 80px;
+    max-width: 1200px;
+    min-width: 800px;
+
+    .title_pay{
+        border-left: 5px  solid ;
+        border-color: #0D3B74;
+        height: 50px;
+
+        .title_pay_text{
+            margin-left: 30px;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+    }
+}
+
+// 產品資訊
+.product_box{
+    margin: 30px 0 30px 0; 
+    background-color: #ffffff;
+    padding: 20px 50px 20px 50px;
+    border-radius: 5px;
+    display: flex;
+
+    img{
+        height: 100px;
+    }
+
+    .product_detail{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        flex-grow:1;
+        margin-left: 25px;
+
+        // LINEBOT
+        >p:nth-child(1){
+            font-size: 1.2rem;
+        }
+
+        // 產品名稱
+        >p:nth-child(2){
+            font-size: 1.5rem;
+            margin-left: -10px;
+        }
+     
+        // 月付制＋加送1天
+        .pay_for_month, .free_10day,.free_10day_bg{
+            display: inline;
+            font-size: 1rem;
+        }
+
+        .pay_for_month{
+            color: #C7C2C2;
+        }
+
+        .free_10day_bg{
+           background-color:#DB5858 ;
+           padding: 2px 10px 2px 10px;
+           margin-left:15px ;
+           border-radius: 5px;
+
+        }
+        .free_10day{
+            color: #ffff;
+
+        }
+
+    }
+
+    .poroduct_price{
+        font-size: 1.5rem;
+        font-weight: 600;
+        align-self: center;
+    }
+ 
+}
+
+// g幣支付
+.g_mony_box{
+    margin: 30px 0 30px 0; 
+    background-color: #ffffff;
+    padding: 20px 50px 20px 50px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing:border-box;
+}
+
+.G_mony_content,.GPlush_mony_content{
+    flex-grow: 1;
+
+}
+
+.G_mony_content{
+    padding-right: 50px;
+}
+
+
+
+.g_mony_box img{
+    width: 25px;
+    padding-right: 10px;  
+}
+
+.g_mony_title,.GPlush_mony_title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    // G幣支付標題
+    :nth-child(2){
+        flex-shrink:1;
+        font-size: 1.5rem;
+        font-weight: 500;
+  
+    }
+
+    // 餘額
+    :nth-child(3){
+        font-size: 1rem;
+        color: #494A49;
+        margin-left: auto;
+        margin-right:10px;
+    }
+
+}
+
+
+.GPlush_mony_title>:nth-child(2){
+    color:#0D3B74;
+}
+
+.GPlush_mony_input,.g_mony_input{
+    width: 93%;
+    
+    margin:10px 0 10px 35px;
+    background-color: #ffffff;
+    border:#D9D9D9  solid 1px;
+    border-radius: 5px;
+
+    outline: 0;
+
+    font-size: 1.2rem;
+    
+    padding: 10px 0;
+    text-align: right;
+
+    box-sizing: border-box;
+    padding-right:10px;
+
+
+   :focus{
+        border-color: #ff6;
+        box-shadow: 1px 2px 1px #996;
+      }
+
+}
+
+.g_mony_input{
+    background-color: #F5F2F2;
+    color: #948D8D;
+}
+
+.GPlush_mony_input{
+    color: #007bff;
+}
+
+
+// 支付上限為
+.GPlush_mony_input+p,.g_mony_input+p{
+    margin-left: 35px;
+    color: #C7C2C2;
+    font-size: 1rem;
+}
+
+
+
+// 付款詳情
+.bill_box{
+    margin: 30px 0 30px 0; 
+    background-color: #ffffff;
+    padding: 20px 50px 20px 50px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .bill_content{
+        display: flex;
+        
+    }
+
+    
+    .product_price,.GPlush_discount,.bill_total{
+        
+        margin-left: 35px;
+        margin-right: 35px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        // 付款詳情內容
+        :nth-child(1){
+            font-size: 1.2rem;
+            color: #494A49;
+            padding: 5px;
+        }
+
+        // 付款詳情內容的金額
+        :nth-child(2){
+            font-size: 1.2rem;
+            color: #494A49;
+        }
+        
+    }
+
+
+    .bill_total{
+        margin-top: 15px;
+        margin-bottom: 15px;
+        
+        // 合計總金額的價格
+        :nth-child(2){
+            color: #D52665;
+            font-size: 1.8rem;
+            font-weight: 800;
+        }
+    }
+
+   
+    .product_price{
+        margin-top: 15px;
+    }
+
+    .GPlush_discount{
+    
+        margin-bottom: 15px;
+        
+        // g+幣折抵金額（藍）
+        :nth-child(2){
+            color: #007bff ;
+        }
+    }
+
+
+    .button_content{
+      
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+        button{
+          cursor: pointer;
+          border: 0;
+          border-radius: 5px;
+          box-shadow: 0 1px 1px 0 rgb(0 0 0 / 9%);
+          padding: 13px 0;
+          margin-top: 22px;
+          width: 100%;
+          
+
+        }
+
+        .add_Gmony_submit{
+             border:1.2pt solid #D52665;
+             background-color:transparent ;
+             color:#D52665;
+             font-weight: 500;
+             margin-right: 22px;
+        }
+
+           .pay_submit{
+             border:1.2pt solid #D52665;
+             background-color:#D52665 ;
+             color:#ffffff;
+             font-weight: 500;
+    
+           
+        }
+
+        // 支付按鈕按下改色
+        .pay_submit:active{
+            background-color:#c3205c ;
+            color: rgba(255, 255, 255, 0.61);
+       }
+
+    //     //儲值按鈕懸停改色
+    //    .pay_submit:hover{
+    //     background-color:#c3205c ;
+    //     }
+
+
+        // 儲值按鈕按下改色
+        .add_Gmony_submit:active{
+            background-color:#007bff;
+            border:1.2pt solid #007bff;
+            color: rgba(255, 255, 255, 0.61);
+       }
+        //  // 儲值按鈕懸停改色
+        //  .add_Gmony_submit:hover{
+        // background-color:#007bff;
+        // border:1.2pt solid #007bff;
+        //       color: #ffffff;
+        // }
+
+
+        span{
+            font-size: 1.2rem;
+           
+        }
+    }
+     
+}
+
+
+
+
+.bill_title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // 付款詳情標題
+     :nth-child(2){
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    img{
+        width: 25px;
+        padding-right: 10px;  
+    }
+}
+
+
+
+// 餘額不足提示
+.warn_content{
+   
+    .warn_icon{
+        display: flex;
+        align-items: center;
+        padding:6px;
+        margin:0 5px;
+        width: 8px;
+        height: 8px;
+        font-size: 0.5rem;
+        border: solid 1pt #D52665;
+        border-radius: 50%;
+
+        font-size: 1.2rem;
+        color: #D52665;
+
+    }
+    .warn_text{
+           font-size: 1rem;
+           color: #D52665;
+           margin-right: 35px;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+
