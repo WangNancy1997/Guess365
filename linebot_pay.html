@@ -4,116 +4,155 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LineBot訂閱支付</title>
     <link rel="stylesheet" href="/css/linebot_pay.css">
+
+    <!-- 引用JQ -->
+    <script 
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+  </script>
+
+    <!-- 引用 font awesome -->
+    <script src="https://kit.fontawesome.com/37f29fd17d.js" crossorigin="anonymous"></script>
+
+
+  
 </head>
 <body>
-    <!-- 黑色背景 -->
-    <div class="black_bg">
-    <!-- 付款視窗 -->
-        <div class="pay_bg">
-            <div class="title_pay">
-                <p class="title_pay_text">訂閱付款</p>
-            </div>
-            <!-- 產品資訊 -->
-            <div class="product_box">
-                <img src="/img/nba_logo.png" alt="">
-                <div class="product_detail">
-                    <p>LINEBOT</p>
-                    <p>【NBA】賽事預測推播</p>
-                    <div>
-                        <p class="pay_for_month">月付制</p>
-                        <div class="free_10day_bg">
-                            <p class="free_10day">加送10天</p>
-                        </div>
+    
+      
+            
+            <!-- 黑色背景 -->
+            <div class="black_bg" id="black_bg">
+            <!-- 付款視窗 -->
+                <div class="pay_bg">
+                    <!-- 關閉按鈕 -->
+                    <div class="close_btn">
+                        <i class="fa-solid fa-xmark"></i>
                     </div>
-                </div>
-
-                    <div class="poroduct_price">
-                        <p>990G幣</p>
+                    <div class="title_pay">
+                        <p class="title_pay_text">訂閱付款</p>
                     </div>
-            </div>
-
-            <!-- G幣資訊 -->
-            <div class="g_mony_box">
-                    <!-- g幣支付 -->
-                    <div class="G_mony_content">
-                        <div class="g_mony_title">
-                            <img src="./img/g幣icon.png" alt="">
-                            <p>Ｇ幣支付</p>
-                            <p>目前G幣500</p>
-                        </div>
-                        <Input type="text" class="g_mony_input"  readonly="readonly" value="0"></Input>
-                       
-
-                    </div>
-
-                        <!-- g+幣支付 -->
-                        <div class="GPlush_mony_content">
-                            <div class="GPlush_mony_title">
-                                <img src="./img/g_plush幣Icon.png" alt="">
-                                <p>GPlush幣支付</p>
-                                <p>目前GPlush幣500</p>
-                            </div>
-                            <Input type="text" class="GPlush_mony_input" ></Input>
-                            <p>折抵上限為990GPlush幣</p>
-                         </div>
-            </div>
-                
-                    <!--  付款詳情 -->
-                        <div class="bill_box">
-                            <div class="bill_content">
-                                <div class="bill_title">
-                                    <img src="./img/detail_icon.png" alt="">
-                                    <p>付款詳情</p>
+                    <!-- 產品資訊 -->
+                    <div class="product_box">
+                        <img src="/img/nba_logo.png" alt="">
+                        <div class="product_detail">
+                            <p>LINEBOT</p>
+                            <p>【NBA】賽事預測推播</p>
+                            <div>
+                                <p class="pay_for_month">月付制</p>
+                                <div class="free_10day_bg">
+                                    <p class="free_10day">加送10天</p>
                                 </div>
-                               
                             </div>
-
-                            <div class="product_price">
-                                <p>小計</p>
+                        </div>
+        
+                            <div class="poroduct_price">
                                 <p>990G幣</p>
                             </div>
-                            <div class="GPlush_discount">
-                                <p>GPlush折抵</p>
-                                <p>-990G幣</p>
-                            </div>
-
-                            <hr>
-
-                            <div class="bill_total">
-                                <p>合計總金額</p>
-                                <p>500G幣</p>
-                            </div>
-
-                            <div class="warn_content">
-                                <div class="warn_icon">
-                                    <p>!</p>
+                    </div>
+        
+                    <!-- G幣資訊 -->
+                    <div class="g_mony_box">
+                            <!-- g幣支付 -->
+                            <div class="G_mony_content">
+                                <div class="g_mony_title">
+                                    <img src="./img/g幣icon.png" alt="">
+                                    <p>Ｇ幣支付</p>
+                                    <p>目前G幣500</p>
                                 </div>
-                                
-                                <p class="warn_text">餘額不足，立刻儲值>></p>
-
+                                <Input type="text" class="g_mony_input"  readonly="readonly" value="0"></Input>
+                                <p>餘額不足100G幣</p>
+        
                             </div>
+        
+                                <!-- g+幣支付 -->
+                                <div class="GPlus_mony_content">
+                                    <div class="GPlus_mony_title">
+                                        <img src="./img/g_Plus幣Icon.png" alt="">
+                                        <p>GPlus幣支付</p>
+                                        <p>目前GPlus幣500</p>
+                                    </div>
+                                    <Input type="text" class="GPlus_mony_input" ></Input>
+                                    <p>折抵上限為990GPlus幣</p>
+                                 </div>
+                    </div>
+                        
+                            <!--  付款詳情 -->
+                                <div class="bill_box">
+                                    <div class="bill_content">
+                                        <div class="bill_title">
+                                            <img src="./img/detail_icon.png" alt="">
+                                            <p>付款詳情</p>
+                                        </div>
+                                       
+                                    </div>
+        
+                                    <div class="product_price">
+                                        <p>小計</p>
+                                        <p>990G幣</p>
+                                    </div>
+                                    <div class="GPlus_discount">
+                                        <p>GPlus折抵</p>
+                                        <p>-990G幣</p>
+                                    </div>
+        
+                                    <hr>
+        
+                                    <div class="bill_total">
+                                        <p>合計總金額</p>
+                                        <p>500G幣</p>
+                                    </div>
+        
+                                    <div class="warn_content">
+                                        <div class="warn_icon">
+                                            <p>!</p>
+                                        </div>
+                                        
+                                        <p class="warn_text">餘額不足，立刻儲值>></p>
+        
+                                    </div>
+        
+        
+                                    <div class="button_content">
+        
+                                        <button  type="button"  class="add_Gmony_submit">
+                                            <span>儲值G幣</span>
+                                        </button>
+        
+                                        <button  type="button"  class="pay_submit">
+                                            <span>支付</span>
+                                        </button>
+                                        <!-- <a class="add_Gmony_submit">儲值G幣</a>
+                                        <a class="pay_submit">支付</a> -->
+                                    </div>
+        
+                                </div>
+                </div>
+        
+        
+        
+            </div>
 
+            <!-- 訂閱視窗按鈕 -->
+            <div class="open_popup">點我在打開視窗</div>
+    
+      
+   
 
-                            <div class="button_content">
+      <!-- 開啟/關閉彈跳視窗按鈕_js -->
+      <script >
+        $('.close_btn').click(function(){
+            $('#black_bg').css('display','none');
+        });
 
-                                <button  type="button"  class="add_Gmony_submit">
-                                    <span>儲值G幣</span>
-                                </button>
-
-                                <button  type="button"  class="pay_submit">
-                                    <span>支付</span>
-                                </button>
-                                <!-- <a class="add_Gmony_submit">儲值G幣</a>
-                                <a class="pay_submit">支付</a> -->
-                            </div>
-
-                        </div>
-        </div>
-
-
-
-    </div>
+        $('.open_popup').click(function(){
+            $('#black_bg').css('display','flex');
+        });
+      </script>
+      
+   
+  
+    
 </body>
 </html>
