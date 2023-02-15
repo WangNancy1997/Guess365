@@ -4,14 +4,14 @@
 }
 body{
    
-    background-color: rgb(154, 153, 223);
-    font-size: 8px;
+    background-color: rgb(154, 152, 238);
+    // font-size:8px;
     
 }
 
 
 .black_bg{
-    background-color: rgba(0, 0, 0, 0.474);
+    // background-color: rgba(21, 18, 18, 0.474);
     
     // height: calc(var(--vh, 1vh) * 100);
     position: absolute;
@@ -26,7 +26,7 @@ body{
     // right: 0;
     // bottom: 0;
     width: 100%;
-    height: 100%;
+    // height: 100%;
    
     min-width: 100vh;
     min-height:100vh;
@@ -43,13 +43,13 @@ body{
 // 開啟視窗按鈕
 .open_popup{
     // position: fixed;
-    // font-size: 5rem;
+    font-size: 2rem;
     color:#ffffff;
     background-color: #007bff;
     display: inline;
     padding: 15px;
     margin: 25px;
-    font-size:2rem;
+    // font-size:100px;
   
 }
 
@@ -68,7 +68,7 @@ body{
     .close_btn{
         color: #00000037;
         font-size: 2rem;
-        position: relative  ;
+        position: relative ;
          float: right;
         bottom: 40px;
         cursor: pointer;
@@ -115,6 +115,7 @@ body{
         // LINEBOT
         >p:nth-child(1){
             font-size: 1.2rem;
+            margin-bottom: 0;
         }
 
         // 產品名稱
@@ -180,7 +181,7 @@ body{
 
 .g_mony_box img{
     width: 25px;
-    padding-right: 10px;  
+    // padding-right: 10px;  
 }
 
 .g_mony_title,.GPlus_mony_title{
@@ -192,7 +193,8 @@ body{
     :nth-child(2){
         flex-shrink:1;
         font-size: 1.5rem;
-        font-weight: 500;
+        font-weight: 600;
+        padding-left: 10px;
   
     }
 
@@ -357,7 +359,7 @@ body{
              border:1.2pt solid #D52665;
              background-color:#D52665 ;
              color:#ffffff;
-             font-weight: 500;
+             font-weight: 600;
     
            
         }
@@ -403,16 +405,18 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-left: 10px;
 
     // 付款詳情標題
      :nth-child(2){
         font-size: 1.5rem;
-        font-weight: 500;
+        font-weight: 600;
+        padding-left: 10px;
     }
 
     img{
         width: 25px;
-        padding-right: 10px;  
+        // padding-rig : 10px;  
     }
 }
 
@@ -424,7 +428,8 @@ body{
     .warn_icon{
         display: flex;
         align-items: center;
-        padding:6px;
+        justify-content: center;
+        padding:8px;
         margin:0 5px;
         width: 8px;
         height: 8px;

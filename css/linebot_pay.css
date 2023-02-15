@@ -4,17 +4,14 @@
 }
 
 body {
-  background-color: rgb(154, 153, 223);
-  font-size: 8px;
+  background-color: rgb(154, 152, 238);
 }
 
 .black_bg {
-  background-color: rgba(0, 0, 0, 0.474);
   position: absolute;
   overflow-y: hidden;
   overflow-x: hidden;
   width: 100%;
-  height: 100%;
   min-width: 100vh;
   min-height: 100vh;
   display: flex;
@@ -23,12 +20,12 @@ body {
 }
 
 .open_popup {
+  font-size: 2rem;
   color: #ffffff;
   background-color: #007bff;
   display: inline;
   padding: 15px;
   margin: 25px;
-  font-size: 2rem;
 }
 
 .pay_bg {
@@ -79,6 +76,7 @@ body {
 }
 .product_box .product_detail > p:nth-child(1) {
   font-size: 1.2rem;
+  margin-bottom: 0;
 }
 .product_box .product_detail > p:nth-child(2) {
   font-size: 1.5rem;
@@ -127,7 +125,6 @@ body {
 
 .g_mony_box img {
   width: 25px;
-  padding-right: 10px;
 }
 
 .g_mony_title, .GPlus_mony_title {
@@ -138,7 +135,8 @@ body {
 .g_mony_title :nth-child(2), .GPlus_mony_title :nth-child(2) {
   flex-shrink: 1;
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
+  padding-left: 10px;
 }
 .g_mony_title :nth-child(3), .GPlus_mony_title :nth-child(3) {
   font-size: 1rem;
@@ -259,7 +257,7 @@ body {
   border: 1.2pt solid #D52665;
   background-color: #D52665;
   color: #ffffff;
-  font-weight: 500;
+  font-weight: 600;
 }
 .bill_box .button_content .pay_submit:active {
   background-color: #c3205c;
@@ -278,14 +276,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 10px;
 }
 .bill_title :nth-child(2) {
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
+  padding-left: 10px;
 }
 .bill_title img {
   width: 25px;
-  padding-right: 10px;
 }
 
 .warn_content {
@@ -296,7 +295,8 @@ body {
 .warn_content .warn_icon {
   display: flex;
   align-items: center;
-  padding: 6px;
+  justify-content: center;
+  padding: 8px;
   margin: 0 5px;
   width: 8px;
   height: 8px;
