@@ -9,7 +9,7 @@ body {
 
 .black_bg {
   position: absolute;
-  overflow-y: hidden;
+  overflow-y: scroll;
   overflow-x: hidden;
   width: 100%;
   min-width: 100vh;
